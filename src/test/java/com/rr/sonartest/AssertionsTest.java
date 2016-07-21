@@ -1,7 +1,7 @@
 package com.rr.sonartest;
 
-import static org.junit.Assert.*;
-
+import org.hamcrest.CoreMatchers;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -13,6 +13,9 @@ public class AssertionsTest {
   public void testSonarAssertions() throws Exception {
     Assertions assertions = new Assertions();
 
-    assertNotNull(assertions);
+    Assert.assertNull(assertions);
+    Assert.assertEquals(null, assertions);
+    Assert.assertThat(assertions, CoreMatchers.nullValue());
+    Assert.assertThat(assertions, CoreMatchers.is((Assertions) null));
   }
 }
