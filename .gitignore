@@ -97,4 +97,4 @@ Session.vim
 tags
 
 /.idea/
-/test-sonar-assertions.iml
+*.iml
